@@ -1,0 +1,12 @@
+{
+    "valid_resource_types" : [
+        "scale-set", 
+        "vm",
+        "container-service"
+    ],
+    "valid_actions" : [
+        "destroy", 
+        "restart"
+    ],
+    "database_file_name" : "main.db"
+}

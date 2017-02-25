@@ -1,0 +1,8 @@
+{   
+    "__comment__" : "scale_set_name and run_probability are optional. If they are not needed, set them equal to an empty string, don't remove them. The available actions are destroy and restart",
+    "schedule_name" : "Test Schedulew",
+    "resource_tpe" : "scale-set",
+    "resource_group" : "test",
+    "run_probability" : "0.7",
+    "scale_set_name" : "test-set",
+    "action" : "restart"
