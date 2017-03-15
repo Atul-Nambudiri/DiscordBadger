@@ -1,20 +1,20 @@
-#ChaosMonkey for Azure (DiscordBadger)
+# ChaosMonkey for Azure (DiscordBadger)
 
-#Description
+# Description
 [ChaosMonkey](https://github.com/Netflix/chaosmonkey) is a system developed in house at Netflix to test the resiliency and fault-tolerance of various services on their AWS stack. 
 
 The goal of this project is to produce a similar system on Microsoft Azure, so that developers can do similar resiliency testing.
 
 DiscordBadger automatically restarts or deletes VMs in Azure Resource Groups, Scale Sets, and Container Services. This can be used to test how systems react to unexpected failures.
 
-#Requirements:
+# Requirements:
 SQLite must be installed.
 
 The following Python modules are also required. They can be installed via pip:
 1. azurerm ( pip install azurerm )
 2. azure ( pip install --pre azure )
 
-#Setup:
+# Setup:
 You will need to create an Active Directory application and service principal, and give them access to your Azure subscription. Instructions can be found [here](http://azure-sdk-for-python.readthedocs.io/en/latest/quickstart_authentication.html?highlight=ServicePrincipalCredentials)
 
 You will need to provide DiscordBadger the subscription id, client id, secret, and tenant id.
@@ -30,7 +30,7 @@ Once you set these variables, DiscordBadger should be able to access your Azure 
 You also need to setup the SQLite database to hold all schedule information. To do this, create a SQLite database in the project folder. Then, execute the commands within db_init.txt
 After that, set the database_file_name parameter within common_config.json to be the name of the database file.
 
-#Usage#
+# Usage
 DiscordBadger works on individual resource groups. Its allows you to define schedules, which are particular resource types of delete vms on. Resource Groups, Scale Sets, and Container Services are the three supported types.
 
 You add schedules by running add_schedule.py, and you run a schedule using run_schedule.py. There are certain parameters that you must define when you create a schedule. They are the following:
