@@ -1,6 +1,6 @@
 # ChaosMonkey for Azure (DiscordBadger)
 
-# Description
+## Description
 [ChaosMonkey](https://github.com/Netflix/chaosmonkey) is a system developed in house at Netflix to test the resiliency and fault-tolerance of various services on their AWS stack. 
 
 The goal of this project is to produce a similar system on Microsoft Azure, so that developers can do similar resiliency testing.
